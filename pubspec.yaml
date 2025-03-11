@@ -59,8 +59,15 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/images/
-    - assets/icons/
+    - assets/images/access.png
+    - assets/images/firstbank.png
+    - assets/images/gtbank.png
+    - assets/images/kuda.png
+    - assets/images/opay.png
+    - assets/images/wemabank.png
+    - assets/images/profilefoto.jpg
+    - assets/images/nightcall.jpg
+    - assets/images/check.jpg
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
