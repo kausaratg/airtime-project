@@ -1,10 +1,38 @@
+import 'package:airtimeproject/constants/airtimeimages.dart';
+import 'package:airtimeproject/screens/login_screen.dart';
+import 'package:airtimeproject/utils/exports.dart';
 import 'package:flutter/material.dart';
 
-class OnboardingScreen extends StatelessWidget {
+class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({super.key});
 
   @override
+  State<OnboardingScreen> createState() => _OnboardingScreenState();
+}
+
+class _OnboardingScreenState extends State<OnboardingScreen> {
+  @override
+  void initState() {
+    super.initState();
+    init();
+  }
+
+  void init() async {
+    await Future.delayed(Duration(seconds: 3));
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => LoginScreen()),
+    );
+  }
+
+  @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      body: Container(
+        width: double.infinity,
+        color: aBlue,
+        child: Center(child: Image.asset(logo)),
+      ),
+    );
   }
 }
