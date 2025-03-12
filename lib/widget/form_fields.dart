@@ -1,6 +1,6 @@
 import 'package:airtimeproject/utils/exports.dart';
 
-class sharedFormFields {
+class SharedFormFields {
   static Widget buildFormField({
     required TextEditingController controller,
     required String label,
