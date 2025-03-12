@@ -1,4 +1,4 @@
-
+import 'package:airtimeproject/screens/onboarding/forgotpassword_screen.dart';
 import 'package:airtimeproject/utils/exports.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -53,7 +53,7 @@ class _LoginScreenState extends State<LoginScreen> {
               SizedBox(height: 37),
 
               // Email Textform
-              sharedFormFields.buildFormField(
+              SharedFormFields.buildFormField(
                 validator: (value) {},
                 controller: emailController,
                 label: emailplaceholder,
@@ -61,14 +61,14 @@ class _LoginScreenState extends State<LoginScreen> {
 
               SizedBox(height: 14),
               // Password form
-              sharedFormFields.buildFormField(
+              SharedFormFields.buildFormField(
                 controller: passwordController,
                 label: passwordplaceholder,
                 validator: (value) {
-                  if (value == null || value.length < 6) {
-                    error = "Incorrect Password Please try again   ";
-                  }
-                  return null;
+                  // if (value == null || value.length < 6) {
+                  //   error = "Incorrect Password Please try again   ";
+                  // }
+                  // return null;
                 },
                 obscureText: true,
               ),
@@ -77,7 +77,14 @@ class _LoginScreenState extends State<LoginScreen> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   GestureDetector(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => ForgotpasswordScreen(),
+                        ),
+                      );
+                    },
                     child: Text(
                       forgottext,
                       style: TextStyle(
@@ -87,12 +94,18 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                     ),
                   ),
-                  if(error.isNotEmpty)
-                    Text(error, style: TextStyle(fontSize: 12, fontWeight: FontWeight.w400, color: oRed),)
-                  
+                  if (error.isNotEmpty)
+                    Text(
+                      error,
+                      style: TextStyle(
+                        fontSize: 12,
+                        fontWeight: FontWeight.w400,
+                        color: oRed,
+                      ),
+                    ),
                 ],
               ),
-              
+
               SizedBox(height: 70),
               RichText(
                 text: TextSpan(
@@ -106,7 +119,14 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                     WidgetSpan(
                       child: InkWell(
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => CreateAccountScreen(),
+                            ),
+                          );
+                        },
                         child: Text(
                           signup,
                           style: TextStyle(
@@ -121,8 +141,9 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
               ),
               SizedBox(height: 70),
+
               SharedButton.buildButton(
-                label: login,
+                label: loginButton,
                 onPressed: () {},
                 isButtonEnabled: isButtonEnable,
               ),

@@ -1,7 +1,4 @@
-import 'package:airtimeproject/constants/airtimeimages.dart';
-import 'package:airtimeproject/screens/login_screen.dart';
 import 'package:airtimeproject/utils/exports.dart';
-import 'package:flutter/material.dart';
 
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({super.key});

@@ -16,10 +16,9 @@ class SharedButton {
       child: ElevatedButton(
         onPressed: isButtonEnabled ? onPressed : null,
         style: ElevatedButton.styleFrom(
-
           backgroundColor: isButtonEnabled ? (backgroundColor ?? aBlue) : aGrey,
           shape: RoundedRectangleBorder(
-            // side: BorderSide(width: 1, color: aGrey),
+            side: BorderSide(width: 1, color: aGrey),
             borderRadius: const BorderRadius.only(
               topRight: Radius.circular(10),
               bottomLeft: Radius.circular(10),
