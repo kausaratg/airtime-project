@@ -9,5 +9,4 @@ export 'package:airtimeproject/constants/airtimeimages.dart';
 export 'package:airtimeproject/constants/airtimetexts.dart';
 export 'package:airtimeproject/screens/onboarding/create_account.dart';
 export 'package:airtimeproject/screens/onboarding/verify_email.dart';
-export 'package:airtimeproject/constants/airtimeimages.dart';
 export 'package:airtimeproject/screens/onboarding/login_screen.dart';

@@ -1,7 +1,6 @@
-import 'package:airtimeproject/constants/airtimecolor.dart';
-import 'package:airtimeproject/constants/airtimetexts.dart';
+
 import 'package:airtimeproject/utils/exports.dart';
-import 'package:flutter/material.dart';
+
 
 class ForgotpasswordScreen extends StatefulWidget {
   const ForgotpasswordScreen({super.key});
