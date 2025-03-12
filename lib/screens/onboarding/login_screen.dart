@@ -56,7 +56,7 @@ class _LoginScreenState extends State<LoginScreen> {
               SizedBox(height: 37),
 
               // Email Textform
-              sharedFormFields.buildFormField(
+              SharedFormFields.buildFormField(
                 validator: (value) {},
                 controller: emailController,
                 label: emailplaceholder,
@@ -64,7 +64,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
               SizedBox(height: 14),
               // Password form
-              sharedFormFields.buildFormField(
+              SharedFormFields.buildFormField(
                 controller: passwordController,
                 label: passwordplaceholder,
                 validator: (value) {
@@ -168,7 +168,11 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
               ),
               SizedBox(height: 70),
-              SharedButton.buildButton(label: login, onPressed: () {}),
+              // SharedButton.buildButton(label: login, onPressed: () {}),
+              CustomButton(
+                text: "Login",
+                onPressed: () {},
+              ),
 
               // SizedBox(
               //   width: double.infinity,
