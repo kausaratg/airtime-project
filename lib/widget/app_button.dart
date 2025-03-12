@@ -4,7 +4,7 @@ class SharedButton {
   static Widget buildButton({
     required VoidCallback onPressed,
     required String label,
-    bool isButtonEnabled = true,
+    bool isButtonEnabled = false,
     double height = 66,
     double width = double.infinity,
     Color? backgroundColor,
@@ -16,9 +16,10 @@ class SharedButton {
       child: ElevatedButton(
         onPressed: isButtonEnabled ? onPressed : null,
         style: ElevatedButton.styleFrom(
+
           backgroundColor: isButtonEnabled ? (backgroundColor ?? aBlue) : aGrey,
           shape: RoundedRectangleBorder(
-            side: BorderSide(width: 1, color: aGrey),
+            // side: BorderSide(width: 1, color: aGrey),
             borderRadius: const BorderRadius.only(
               topRight: Radius.circular(10),
               bottomLeft: Radius.circular(10),
